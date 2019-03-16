@@ -1,14 +1,19 @@
-.btn:link,
-.btn:visited {
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  margin: 0 auto;
-  border-radius: 10rem;
-  transition: all 0.2s ease-out;
-  position: relative;
-  font-size: 1.6rem;
+.btn {
+  &,
+  .btn:link,
+  .btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 10rem;
+    transition: all 0.2s ease-out;
+    position: relative;
+    font-size: $default-font-size; //change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
 }
 
 .btn:hover {
@@ -16,7 +21,8 @@
   box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 }
 
-.btn:active {
+.btn:active,
+.btn:focus {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
 }
